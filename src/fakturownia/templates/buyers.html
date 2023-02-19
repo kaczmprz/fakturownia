@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <h1>Buyer List</h1>
+    <ul>
+      {% for buyer in buyers: %}
+      <li>
+      {{buyer.name}} {{buyer.nip}}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
