@@ -12,7 +12,7 @@ def index():
     return render_template("buyers.html", buyers=buyers)
 
 
-@buyer.route('/create_buyer', methods=['GET', 'POST'])
+@buyer.route('/create', methods=['GET', 'POST'])
 def create_buyer():
     form = BuyerForm()
     if request.method == 'POST':
@@ -23,4 +23,4 @@ def create_buyer():
             db.session.commit()
             return redirect('/buyers')
 
-    return render_template("create_buyer.html", form=form)
+    return render_template("create.html", form=form)

@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <h1>Inovice List</h1>
+    <ul>
+      {% for invoice in invoices: %}
+      <li>
+      {{invoice.buyer_id}} {{invoice.seller_id}} {{invoice.value}}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
